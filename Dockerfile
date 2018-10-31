@@ -10,6 +10,9 @@ RUN mkdir /shiny-apps && \
     git clone https://github.com/bioinformatics-core-shared-training/OneSampleTest.git /shiny-apps/onesamp
 # Copy new index.htm as /srv/shiny-server/index.htm to allow access to our shiny apps
 COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
+# Install the packages needed by our apps
+COPY installRpackages.R /shiny-apps/installRpackages.R
+RUN R -f /shint-apps/installRpackages.R
 #
 # to allow access from outside of the container to the container service
 # at the ports to allow access from firewall if accessing from outside the server. 
