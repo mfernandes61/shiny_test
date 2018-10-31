@@ -1,6 +1,7 @@
 install.packages(c(
 "shiny",
 "shinyjs",
+"gamlss",
 "rhandsontable",
 "tidyverse",
 "reshape2",
