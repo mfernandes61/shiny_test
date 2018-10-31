@@ -7,7 +7,8 @@ RUN mkdir /shiny-apps && \
     git clone https://github.com/bioinformatics-core-shared-training/central-limit-theorem.git /shiny-apps/clt && \
     git clone https://github.com/bioinformatics-core-shared-training/contingency-table.git /shiny-apps/contab && \
     git clone https://github.com/bioinformatics-core-shared-training/TwoSampleTest.git /shiny-apps/twosamp && \
-    git clone https://github.com/bioinformatics-core-shared-training/OneSampleTest.git /shiny-apps/onesamp
+    git clone https://github.com/bioinformatics-core-shared-training/OneSampleTest.git /shiny-apps/onesamp && \
+    git clone https://github.com/bioinformatics-core-shared-training/smarties.git /shiny-apps/smarties
 # Copy new index.htm as /srv/shiny-server/index.htm to allow access to our shiny apps
 COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
 # Install the packages needed by our apps
