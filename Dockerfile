@@ -12,7 +12,7 @@ RUN mkdir /shiny-apps && \
 COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
 # Install the packages needed by our apps
 COPY installRpackages.R /shiny-apps/installRpackages.R
-RUN R -f /shint-apps/installRpackages.R
+RUN R -f /shiny-apps/installRpackages.R
 #
 # to allow access from outside of the container to the container service
 # at the ports to allow access from firewall if accessing from outside the server. 
