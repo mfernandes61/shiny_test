@@ -4,7 +4,7 @@ install.packages(c(
 "rhandsontable",
 "tidyverse",
 "reshape2",
-"gridextra",
+"gridExtra",
 "pastecs",
 "knitr",
 "RcmdrMisc"),
