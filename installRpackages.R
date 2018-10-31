@@ -1,0 +1,11 @@
+install.packages(c(
+"shiny",
+"shinyjs",
+"rhandsontable",
+"tidyverse",
+"reshape2",
+"gridextra",
+"pastecs",
+"knitr",
+"RcmdrMisc"),
+repos="https://cran.ma.imperial.ac.uk/")
