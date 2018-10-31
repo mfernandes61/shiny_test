@@ -3,7 +3,8 @@ MAINTAINER Mark Fernandes <mark.fernandes@cruk.cam.ac.uk>
 # Environment to deliver Introduction to Stats course Shiny apps under Docker
 RUN apt-get update && apt-get install -y wget git unzip gzip tar && \
         rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
-RUN git clone https://github.com/bioinformatics-core-shared-training/central-limit-theorem.git /shinyapps/clt && \
+RUN mkdir /shiny-apps && \
+    git clone https://github.com/bioinformatics-core-shared-training/central-limit-theorem.git /shiny-apps/clt && \
     git clone https://github.com/bioinformatics-core-shared-training/contingency-table.git /shiny-apps/contab && \
     git clone https://github.com/bioinformatics-core-shared-training/TwoSampleTest.git /shiny-apps/twosamp && \
     git clone https://github.com/bioinformatics-core-shared-training/OneSampleTest.git /shiny-apps/onesamp
