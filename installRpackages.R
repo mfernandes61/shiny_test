@@ -9,4 +9,4 @@ install.packages(c(
 "pastecs",
 "knitr",
 "RcmdrMisc"),
-repos="https://cran.ma.imperial.ac.uk/")
+repos="https://cran.ma.imperial.ac.uk/",quiet=TRUE)
