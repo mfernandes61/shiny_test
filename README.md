@@ -1,5 +1,5 @@
 # shiny_test
-test for CRUK-CI shiy apps training environment
+test for CRUK-CI Shiny apps training environment
 
 This builds a container with all the infra-structure (Shiny server, R with req. packages)
 to run some Shiny apps that CRUK-CI have developed for use in our Bioinformatics training courses.
