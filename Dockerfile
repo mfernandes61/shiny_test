@@ -3,7 +3,9 @@ MAINTAINER Mark Fernandes <mark.fernandes@cruk.cam.ac.uk>
 # Environment to deliver Introduction to Stats course Shiny apps under Docker
 RUN apt-get update && apt-get install -y wget git unzip gzip tar && \
         rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
+COPY index.html index.html
 RUN mkdir /shiny-apps && \
+    cp index.html /shiny-apps/index.html && \
     git clone https://github.com/bioinformatics-core-shared-training/central-limit-theorem.git /shiny-apps/clt && \
     git clone https://github.com/bioinformatics-core-shared-training/contingency-table.git /shiny-apps/contab && \
     git clone https://github.com/bioinformatics-core-shared-training/TwoSampleTest.git /shiny-apps/twosamp && \
@@ -11,7 +13,6 @@ RUN mkdir /shiny-apps && \
     git clone https://github.com/bioinformatics-core-shared-training/smarties.git /shiny-apps/smarties
 # Copy new index.htm as /srv/shiny-server/index.htm to allow access to our shiny apps
 COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
-COPY index.html /shiny-apps/index.html
 # Install the packages needed by our apps
 COPY installRpackages.R /shiny-apps/installRpackages.R
 RUN R -f /shiny-apps/installRpackages.R
