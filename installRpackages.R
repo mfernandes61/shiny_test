@@ -7,7 +7,8 @@ install.packages(c(
 "reshape2",
 "gridExtra",
 "pastecs",
-"knitr",
-"RcmdrMisc"),
+"knitr"),
 repos="https://cran.ma.imperial.ac.uk/",quiet=TRUE)
-install.packages("RcmdrMisc", repos="https://cloud.r-project.org",quiet=TRUE)
+install.packages("devtools")
+require(devtools)
+install_version("RcmdrMisc", version="2.5-0", repos="https://cloud.r-project.org")
