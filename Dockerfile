@@ -1,7 +1,7 @@
 FROM quantumobject/docker-shiny
 MAINTAINER Mark Fernandes <mark.fernandes@cruk.cam.ac.uk>
 # Environment to deliver Introduction to Stats course Shiny apps under Docker
-RUN apt-get update && apt-get install -y wget git unzip gzip tar && \
+RUN apt-get update && apt-get install -y wget git unzip gzip tar  \
 openssl libssl-dev && \
         rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 COPY Index.html index.html
