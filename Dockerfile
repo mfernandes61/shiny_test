@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y wget git unzip gzip tar  \
 openssl libssl-dev && \
         rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 COPY Index.html index.html
+COPY CRUK*.jpg CRUK*.jpg
 RUN mkdir /shiny-apps && \
     cp index.html /shiny-apps/index.html && \
     git clone https://github.com/bioinformatics-core-shared-training/central-limit-theorem.git /shiny-apps/clt && \
