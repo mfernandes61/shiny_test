@@ -9,6 +9,7 @@ install.packages(c(
 "pastecs",
 "knitr"),
 repos="https://cran.ma.imperial.ac.uk/",quiet=TRUE)
-install.packages("devtools")
-require(devtools)
-install_version("RcmdrMisc", version="2.5-0", repos="https://cloud.r-project.org")
+# Feb 2019 - Matt has removed the RCmdrMisc dependency from the Shiny Apps
+# install.packages("devtools")
+# require(devtools)
+# install_version("RcmdrMisc", version="2.5-0", repos="https://cloud.r-project.org")
